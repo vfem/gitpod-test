@@ -19,6 +19,8 @@ COPY pom.xml pom.xml
 
 RUN mvn clean install -DskipTests
 
+RUN echo "$PATH"
+
 RUN cp ./target/gitpod-test-*.jar app.jar
 
 EXPOSE 80
